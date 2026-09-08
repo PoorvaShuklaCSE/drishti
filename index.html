@@ -1,24 +1,502 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+<head>
+    <meta charset="UTF-8">
 
-    <meta
-      name="description"
-      content="DRISHTI - Data-driven Road Intelligence and Safety Tracking Initiative"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DRISHTI | Road Intelligence</title>
-  </head>
+    <title>DRISHTI | Road Intelligence System</title>
 
-  <body>
-    <div id="root"></div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">◉</div>
+
+            <div>
+                <h1>DRISHTI</h1>
+                <p>Road Intelligence</p>
+            </div>
+        </div>
+
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav class="navigation">
+
+            <button class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item">
+                <span>⌖</span>
+                Live Road Map
+            </button>
+
+            <button class="nav-item">
+                <span>🚗</span>
+                Vehicle Scans
+            </button>
+
+            <button class="nav-item">
+                <span>⚠</span>
+                Hazard Intelligence
+            </button>
+
+            <button class="nav-item">
+                <span>▥</span>
+                Analytics
+            </button>
+
+            <button class="nav-item">
+                <span>◷</span>
+                Road History
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-card">
+
+                <div class="system-header">
+                    <span class="status-light"></span>
+                    SYSTEM STATUS
+                </div>
+
+                <strong>All Systems Online</strong>
+
+                <p>Server connected</p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+        <header class="topbar">
+
+            <div>
+                <p class="small-title">DRISHTI ROAD INTELLIGENCE</p>
+
+                <h2>Dashboard Overview</h2>
+
+                <p class="subtitle">
+                    Real-time monitoring and road safety intelligence
+                </p>
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="location">
+                    📍 Delhi NCR
+                </div>
+
+                <div class="live-indicator">
+                    <span></span>
+                    LIVE
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>ROADS SCANNED</span>
+                    <div class="stat-icon blue">🛣</div>
+                </div>
+
+                <h3>128</h3>
+
+                <p class="positive">↑ 12% from last week</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>HIGH RISK</span>
+                    <div class="stat-icon red">⚠</div>
+                </div>
+
+                <h3>23</h3>
+
+                <p class="negative">Requires attention</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>ACTIVE HAZARDS</span>
+                    <div class="stat-icon orange">◉</div>
+                </div>
+
+                <h3>347</h3>
+
+                <p class="neutral">Across monitored roads</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>ACTIVE VEHICLES</span>
+                    <div class="stat-icon green">🚗</div>
+                </div>
+
+                <h3>06</h3>
+
+                <p class="positive">All vehicles connected</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN DASHBOARD -->
+        <section class="dashboard-layout">
+
+
+            <!-- MAP SECTION -->
+            <div class="map-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Live Road Intelligence Map</h3>
+
+                        <p>Real-time road condition monitoring</p>
+                    </div>
+
+
+                    <div class="map-live">
+                        <span></span>
+                        Live Data
+                    </div>
+
+                </div>
+
+
+                <!-- VISUAL MAP -->
+                <div class="road-map">
+
+                    <div class="map-grid-lines"></div>
+
+                    <div class="map-road safe-road"></div>
+                    <div class="map-road moderate-road"></div>
+                    <div class="map-road risky-road"></div>
+                    <div class="map-road danger-road"></div>
+
+                    <div class="map-vehicle vehicle-one">
+                        🚗
+                        <span>V001</span>
+                    </div>
+
+                    <div class="map-vehicle vehicle-two">
+                        🚙
+                        <span>V002</span>
+                    </div>
+
+                    <div class="hazard hazard-one">⚠</div>
+                    <div class="hazard hazard-two">⚠</div>
+                    <div class="hazard hazard-three">⚠</div>
+
+                    <div class="map-label label-one">Sector 18</div>
+                    <div class="map-label label-two">Main Road</div>
+
+                </div>
+
+
+                <!-- MAP LEGEND -->
+                <div class="map-legend">
+
+                    <span>
+                        <i class="legend-dot safe"></i>
+                        Safe
+                    </span>
+
+                    <span>
+                        <i class="legend-dot moderate"></i>
+                        Moderate
+                    </span>
+
+                    <span>
+                        <i class="legend-dot risky"></i>
+                        Risky
+                    </span>
+
+                    <span>
+                        <i class="legend-dot danger"></i>
+                        High Risk
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROAD HEALTH -->
+            <div class="health-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Road Health</h3>
+                        <p>Overall safety condition</p>
+                    </div>
+
+                </div>
+
+
+                <div class="health-score">
+
+                    <div class="score-ring">
+
+                        <div class="score-inner">
+                            <strong>68</strong>
+                            <span>/100</span>
+                        </div>
+
+                    </div>
+
+                    <h3>MODERATE</h3>
+
+                    <p>Road network condition is stable</p>
+
+                </div>
+
+
+                <div class="risk-distribution">
+
+                    <div class="risk-row">
+
+                        <div>
+                            <span class="dot safe-dot"></span>
+                            Safe
+                        </div>
+
+                        <strong>62%</strong>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div class="progress-fill safe-fill"></div>
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div>
+                            <span class="dot moderate-dot"></span>
+                            Moderate
+                        </div>
+
+                        <strong>21%</strong>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div class="progress-fill moderate-fill"></div>
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div>
+                            <span class="dot risky-dot"></span>
+                            Risky
+                        </div>
+
+                        <strong>10%</strong>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div class="progress-fill risky-fill"></div>
+                    </div>
+
+
+                    <div class="risk-row">
+
+                        <div>
+                            <span class="dot danger-dot"></span>
+                            High Risk
+                        </div>
+
+                        <strong>7%</strong>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div class="progress-fill danger-fill"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HAZARD INTELLIGENCE -->
+        <section class="hazard-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="small-title">ROAD ANALYSIS</p>
+
+                    <h3>Recent Hazard Intelligence</h3>
+                </div>
+
+                <button id="refreshButton">
+                    ↻ Refresh Data
+                </button>
+
+            </div>
+
+
+            <div class="hazard-grid">
+
+                <div class="hazard-card">
+
+                    <div class="hazard-icon">🕳</div>
+
+                    <div>
+                        <strong>17</strong>
+                        <p>Potholes Detected</p>
+                    </div>
+
+                    <span class="trend warning">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="hazard-card">
+
+                    <div class="hazard-icon">💧</div>
+
+                    <div>
+                        <strong>03</strong>
+                        <p>Waterlogging Areas</p>
+                    </div>
+
+                    <span class="trend danger">
+                        Attention
+                    </span>
+
+                </div>
+
+
+                <div class="hazard-card">
+
+                    <div class="hazard-icon">⚠</div>
+
+                    <div>
+                        <strong>04</strong>
+                        <p>Speedbreakers</p>
+                    </div>
+
+                    <span class="trend safe-status">
+                        Verified
+                    </span>
+
+                </div>
+
+
+                <div class="hazard-card">
+
+                    <div class="hazard-icon">≋</div>
+
+                    <div>
+                        <strong>08</strong>
+                        <p>Road Cracks</p>
+                    </div>
+
+                    <span class="trend warning">
+                        Monitoring
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERT -->
+        <section class="alert-panel">
+
+            <div class="alert-icon">
+                ⚠
+            </div>
+
+            <div>
+
+                <strong>High Risk Road Segment Detected</strong>
+
+                <p>
+                    Sector 18 Main Road has multiple potholes and waterlogging.
+                    Recommended speed: 30 km/h.
+                </p>
+
+            </div>
+
+            <button id="viewRoadButton">
+                View Road →
+            </button>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <span>© 2026 DRISHTI</span>
+
+            <span>
+                Data-driven Road Intelligence & Safety Tracking Initiative
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
